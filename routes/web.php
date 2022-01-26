@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MainController;
 
 use Illuminate\Support\Facades\Route;
@@ -21,7 +22,8 @@ Route::get('/', function () {
 
 Route::post('main',[MainController::class,'getData']);
 Route::view('report','main');
-// Route::get('/',[MainController::class,'index']);
+Route::get('my-home',[HomeController::class,'myHome']);
+Route::get('my-users',[HomeController::class,'myUsers']);
 // Route::post('getData',[MainController::class,'getData']);
 
 
